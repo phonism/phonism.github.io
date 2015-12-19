@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      ProjectEuler Solution Part 2 (P11 - P20) | Phonism&#39;s Blog 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Qi Lu">
+    
+    
+
+    <meta name="description" content="Project Euler #12: Highly divisible triangular number这题直接去暴力做会TLE，但是由于$N$比较小，所以我们可以打表！下面C++代码是打表程序，Python代码是提交代码。12345678910111213141516171819202122232425262728293031323334353637#include &amp;lt;cstdio&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ProjectEuler Solution Part 2 (P11 - P20) | Phonism's Blog">
+<meta property="og:url" content="http://phonism.github.io/2015/12/19/PEsol11-20/index.html">
+<meta property="og:site_name" content="Phonism's Blog">
+<meta property="og:description" content="Project Euler #12: Highly divisible triangular number这题直接去暴力做会TLE，但是由于$N$比较小，所以我们可以打表！下面C++代码是打表程序，Python代码是提交代码。12345678910111213141516171819202122232425262728293031323334353637#include &amp;lt;cstdio&amp;gt">
+<meta property="og:updated_time" content="2015-12-19T09:11:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ProjectEuler Solution Part 2 (P11 - P20) | Phonism's Blog">
+<meta name="twitter:description" content="Project Euler #12: Highly divisible triangular number这题直接去暴力做会TLE，但是由于$N$比较小，所以我们可以打表！下面C++代码是打表程序，Python代码是提交代码。12345678910111213141516171819202122232425262728293031323334353637#include &amp;lt;cstdio&amp;gt">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
+    <link rel="stylesheet" href="/css/archive.css" type="text/css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Phonism&#39;s Blog</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          Learning Machine Learning.
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">ProjectEuler Solution Part 2 (P11 - P20)</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2015-12-19" class="post-meta__date date">2015-12-19</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/HackerRank/">HackerRank</a>, <a class="tags-link" href="/tags/ProjectEuler/">ProjectEuler</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="Project_Euler__2312_3A_Highly_divisible_triangular_number"><a href="#Project_Euler__2312_3A_Highly_divisible_triangular_number" class="headerlink" title="Project Euler #12: Highly divisible triangular number"></a><a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler012" target="_blank" rel="external">Project Euler #12: Highly divisible triangular number</a></h3><p>这题直接去暴力做会TLE，但是由于$N$比较小，所以我们可以打表！下面C++代码是打表程序，Python代码是提交代码。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">tri</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">long</span> <span class="keyword">long</span>)n * (n + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_num_fac</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> num)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; (<span class="keyword">long</span> <span class="keyword">long</span>)i * i &lt;= num; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (num % i == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i * i == num)</span><br><span class="line">                res += <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                res += <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line">            </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> best = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; best &lt;= <span class="number">1000</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (get_num_fac(tri(i)) &gt; best) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"(%lld, %d),\n"</span>, tri(i), get_num_fac(tri(i)));</span><br><span class="line">            best = get_num_fac(tri(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">ans = [</span><br><span class="line">    (<span class="number">3</span>, <span class="number">2</span>),</span><br><span class="line">    (<span class="number">6</span>, <span class="number">4</span>),</span><br><span class="line">    (<span class="number">28</span>, <span class="number">6</span>),</span><br><span class="line">    (<span class="number">36</span>, <span class="number">9</span>),</span><br><span class="line">    (<span class="number">120</span>, <span class="number">16</span>),</span><br><span class="line">    (<span class="number">300</span>, <span class="number">18</span>),</span><br><span class="line">    (<span class="number">528</span>, <span class="number">20</span>),</span><br><span class="line">    (<span class="number">630</span>, <span class="number">24</span>),</span><br><span class="line">    (<span class="number">2016</span>, <span class="number">36</span>),</span><br><span class="line">    (<span class="number">3240</span>, <span class="number">40</span>),</span><br><span class="line">    (<span class="number">5460</span>, <span class="number">48</span>),</span><br><span class="line">    (<span class="number">25200</span>, <span class="number">90</span>),</span><br><span class="line">    (<span class="number">73920</span>, <span class="number">112</span>),</span><br><span class="line">    (<span class="number">157080</span>, <span class="number">128</span>),</span><br><span class="line">    (<span class="number">437580</span>, <span class="number">144</span>),</span><br><span class="line">    (<span class="number">749700</span>, <span class="number">162</span>),</span><br><span class="line">    (<span class="number">1385280</span>, <span class="number">168</span>),</span><br><span class="line">    (<span class="number">1493856</span>, <span class="number">192</span>),</span><br><span class="line">    (<span class="number">2031120</span>, <span class="number">240</span>),</span><br><span class="line">    (<span class="number">2162160</span>, <span class="number">320</span>),</span><br><span class="line">    (<span class="number">17907120</span>, <span class="number">480</span>),</span><br><span class="line">    (<span class="number">76576500</span>, <span class="number">576</span>),</span><br><span class="line">    (<span class="number">103672800</span>, <span class="number">648</span>),</span><br><span class="line">    (<span class="number">236215980</span>, <span class="number">768</span>),</span><br><span class="line">    (<span class="number">842161320</span>, <span class="number">1024</span>)</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">test = int(raw_input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> cas <span class="keyword">in</span> range(test):</span><br><span class="line">    n = int(raw_input())</span><br><span class="line">    <span class="keyword">for</span> a, b <span class="keyword">in</span> ans:</span><br><span class="line">        <span class="keyword">if</span> b &gt; n:</span><br><span class="line">            <span class="keyword">print</span> a</span><br><span class="line">            <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<h3 id="Project_Euler__2313_3A_Large_sum"><a href="#Project_Euler__2313_3A_Large_sum" class="headerlink" title="Project Euler #13: Large sum"></a><a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler013" target="_blank" rel="external">Project Euler #13: Large sum</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">N = int(raw_input())</span><br><span class="line"></span><br><span class="line">ans = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(N):</span><br><span class="line">    num = int(raw_input())</span><br><span class="line">    ans += num</span><br><span class="line"><span class="keyword">print</span> str(ans)[<span class="number">0</span>:<span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="Project_Euler__2314_3A_Longest_Collatz_sequence"><a href="#Project_Euler__2314_3A_Longest_Collatz_sequence" class="headerlink" title="Project Euler #14: Longest Collatz sequence"></a><a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler014" target="_blank" rel="external">Project Euler #14: Longest Collatz sequence</a></h3><p>直接暴力做会TLE，所以这里我们需要记忆化，保存以下中间结果。但是Python会爆出Memory Error的错误，所以这里给出C++解法。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">5000010</span>;</span><br><span class="line"><span class="keyword">int</span> tmp_ans[maxn], ans[maxn], sum_ans[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_len</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n != <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            n /= <span class="number">2</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            n = n * <span class="number">3</span> + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        res += <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; maxn &amp;&amp; tmp_ans[n] != <span class="number">0</span>) &#123;</span><br><span class="line">            res += tmp_ans[n];</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">5000000</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (tmp_ans[i] == <span class="number">0</span>)</span><br><span class="line">            tmp_ans[i] = get_len((<span class="keyword">long</span> <span class="keyword">long</span>)i);</span><br><span class="line">        <span class="keyword">if</span> (tmp_ans[i] &gt;= sum_ans[i-<span class="number">1</span>]) &#123;</span><br><span class="line">            sum_ans[i] = tmp_ans[i];</span><br><span class="line">            ans[i] = i;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sum_ans[i] = sum_ans[i-<span class="number">1</span>];</span><br><span class="line">            ans[i] = ans[i-<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">int</span> test, n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;test);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> cas = <span class="number">1</span>; cas &lt;= test; cas++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans[n]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Project_Euler__2315_3A_Lattice_paths"><a href="#Project_Euler__2315_3A_Lattice_paths" class="headerlink" title="Project Euler #15: Lattice paths"></a><a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler015" target="_blank" rel="external">Project Euler #15: Lattice paths</a></h3><ul>
+<li>这里使用Python的二维数字，要注意浅拷贝问题，详见：<a href="http://www.cnblogs.com/btchenguang/archive/2012/01/30/2332479.html" target="_blank" rel="external">http://www.cnblogs.com/btchenguang/archive/2012/01/30/2332479.html</a></li>
+<li>这里要预处理组合数。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">c = [([<span class="number">0</span>] * <span class="number">1001</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1001</span>)]</span><br><span class="line">mod = <span class="number">1000000007</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1001</span>):</span><br><span class="line">    c[i][<span class="number">0</span>] = <span class="number">1</span></span><br><span class="line">    c[i][i] = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">1001</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, i):</span><br><span class="line">        c[i][j] = (c[i-<span class="number">1</span>][j-<span class="number">1</span>] + c[i-<span class="number">1</span>][j]) % mod</span><br><span class="line"></span><br><span class="line">test = int(raw_input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> cas <span class="keyword">in</span> range(test):</span><br><span class="line">    n, m = map(int, raw_input().split())</span><br><span class="line">    <span class="keyword">print</span> c[n + m][n] % mod</span><br></pre></td></tr></table></figure>
+<h3 id="Project_Euler__2316_3A_Power_digit_sum"><a href="#Project_Euler__2316_3A_Power_digit_sum" class="headerlink" title="Project Euler #16: Power digit sum"></a><a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler016" target="_blank" rel="external">Project Euler #16: Power digit sum</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test = int(raw_input())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> cas <span class="keyword">in</span> range(test):</span><br><span class="line">    n = int(raw_input())</span><br><span class="line">    <span class="keyword">print</span> sum(map(int, str(<span class="number">2</span> ** n)))</span><br></pre></td></tr></table></figure>
+<h3 id="Project_Euler__2317_3A_Number_to_Words"><a href="#Project_Euler__2317_3A_Number_to_Words" class="headerlink" title="Project Euler #17: Number to Words"></a><a href="https://www.hackerrank.com/contests/projecteuler/challenges/euler017" target="_blank" rel="external">Project Euler #17: Number to Words</a></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
