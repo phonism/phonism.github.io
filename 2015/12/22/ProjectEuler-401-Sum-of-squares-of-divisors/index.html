@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      ProjectEuler 401: Sum of squares of divisors | Phonism&#39;s Blog 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Qi Lu">
+    
+    
+
+    <meta name="description" content="Links: https://projecteuler.net/problem=401
+这题是个比较经典的题，大概就是枚举$floor(n / i)$划分区间，然后复杂度就是$sqrt(n)$。直接用的scala的BigInt来做的话，需要花费1分钟，所以可以加上对中间值取模的优化，下面的代码运行时间大概10s。
+Scala代码：1234567891011121314151617181920212">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ProjectEuler 401: Sum of squares of divisors | Phonism's Blog">
+<meta property="og:url" content="http://phonism.github.io/2015/12/22/ProjectEuler-401-Sum-of-squares-of-divisors/index.html">
+<meta property="og:site_name" content="Phonism's Blog">
+<meta property="og:description" content="Links: https://projecteuler.net/problem=401
+这题是个比较经典的题，大概就是枚举$floor(n / i)$划分区间，然后复杂度就是$sqrt(n)$。直接用的scala的BigInt来做的话，需要花费1分钟，所以可以加上对中间值取模的优化，下面的代码运行时间大概10s。
+Scala代码：1234567891011121314151617181920212">
+<meta property="og:updated_time" content="2015-12-22T04:38:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ProjectEuler 401: Sum of squares of divisors | Phonism's Blog">
+<meta name="twitter:description" content="Links: https://projecteuler.net/problem=401
+这题是个比较经典的题，大概就是枚举$floor(n / i)$划分区间，然后复杂度就是$sqrt(n)$。直接用的scala的BigInt来做的话，需要花费1分钟，所以可以加上对中间值取模的优化，下面的代码运行时间大概10s。
+Scala代码：1234567891011121314151617181920212">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+    <link rel="stylesheet" href="/css/highlight.css" type="text/css">
+    <link rel="stylesheet" href="/css/archive.css" type="text/css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Phonism&#39;s Blog</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          Learning Machine Learning.
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">ProjectEuler 401: Sum of squares of divisors</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2015-12-22" class="post-meta__date date">2015-12-22</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/ProjectEuler/">ProjectEuler</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>Links: <a href="https://projecteuler.net/problem=401" target="_blank" rel="external">https://projecteuler.net/problem=401</a></p>
+<p>这题是个比较经典的题，大概就是枚举$floor(n / i)$划分区间，然后复杂度就是$sqrt(n)$。直接用的scala的BigInt来做的话，需要花费1分钟，所以可以加上对中间值取模的优化，下面的代码运行时间大概10s。</p>
+<p>Scala代码：<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">PE401</span> &#123;</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">val</span> mod: <span class="type">Long</span> = <span class="number">1000000000</span>L</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">sum_square</span>(</span>n: <span class="type">Long</span>): <span class="type">Long</span> = &#123;</span><br><span class="line">    <span class="keyword">var</span> x: <span class="type">Long</span> = n</span><br><span class="line">    <span class="keyword">var</span> y: <span class="type">Long</span> = n + <span class="number">1</span></span><br><span class="line">    <span class="keyword">var</span> z: <span class="type">Long</span> = <span class="number">2</span> * n + <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> (x % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">      x /= <span class="number">2</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      y /= <span class="number">2</span></span><br><span class="line">    <span class="keyword">if</span> (x % <span class="number">3</span> == <span class="number">0</span>)</span><br><span class="line">      x /= <span class="number">3</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (y % <span class="number">3</span> == <span class="number">0</span>)</span><br><span class="line">      y /= <span class="number">3</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      z /= <span class="number">3</span></span><br><span class="line">    (((x % mod) * (y % mod) % mod) * (z % mod)) % mod</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span>(</span>args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> =&#123;</span><br><span class="line">    <span class="keyword">var</span> ans: <span class="type">Long</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">val</span> end: <span class="type">Long</span> = <span class="number">1000000000000000</span>L</span><br><span class="line">    <span class="keyword">var</span> idx: <span class="type">Long</span> = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> (idx &lt;= end) &#123;</span><br><span class="line">      <span class="keyword">val</span> mul: <span class="type">Long</span> = end / idx</span><br><span class="line">      <span class="keyword">val</span> next: <span class="type">Long</span> = end / mul + <span class="number">1</span></span><br><span class="line">      ans = (ans + (mul % mod * ((sum_square(next - <span class="number">1</span>) - sum_square(idx - <span class="number">1</span>) + mod) % mod)) % mod) % mod</span><br><span class="line">      idx = next</span><br><span class="line">    &#125;</span><br><span class="line">    println(ans)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Answer: <font color="white">281632621</font> (选中查看)</p>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
