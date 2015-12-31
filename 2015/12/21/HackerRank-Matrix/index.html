@@ -87,7 +87,7 @@
                 <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
               
                 
-                <li class="navigation__item"><a href="/hackerrank" title="" class="">HackerRank题解</a></li>
+                <li class="navigation__item"><a href="/site" title="" class="">链接</a></li>
               
 
             </ul>
@@ -196,6 +196,26 @@ classes that you can use:
 
   
   
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2015/12/21/HackerRank-Matrix/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"luqi"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
 </article>
 
 
@@ -245,5 +265,35 @@ classes that you can use:
   <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
 <![endif]-->
 
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </body>
 </html>
