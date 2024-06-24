@@ -37,6 +37,16 @@ var myData = {
             "src": "myworks/photo6.jpg",
             "w": 4534,
             "h": 3017
+        },
+        {
+            "src": "myworks/photo7.jpg",
+            "w": 3592,
+            "h": 5392
+        },
+        {
+            "src": "myworks/photo8.jpg",
+            "w": 5568,
+            "h": 3712
         }
     ]
 }
