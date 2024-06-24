@@ -67,9 +67,8 @@ function getImages() {
 		imgHeight = imgHeight <= 300 ? imgHeight : 300;
 		galleryHtml += `
 			<figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*4)+1}">
-				<div class="img-wrapper" style="padding-bottom:${imgHeight}%;">
-					<img src="${gallery[galleryIndex].src}"/>
-				</div>
+                <div class="img-wrapper" style="padding-bottom:${imgHeight}%;">
+                <img src="${gallery[galleryIndex].slt_src}"></div>
 			</figure>
 		`;
 		galleryIndex++;
@@ -105,6 +104,7 @@ function initOverlayout() {
 				console.log("index:" + index);
 				// 定位被点击的img,[0]是一个DOM对象
 				var thumbnail = $('.gallery-item').eq(index).find('img')[0];
+				console.log("image:" + thumbnail);
 				// 获取当前窗口的滚动位置
 				var scrollTop = $(window).scrollTop();
 				// 瀑布流数据时懒加载, 需要判断一下当前是否已经加载了弹窗收起时当前的img对象
