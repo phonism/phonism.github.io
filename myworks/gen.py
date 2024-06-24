@@ -7,7 +7,7 @@ js = {
     "designer": {
         "name": "Gallery",
         "tag": ["A beginner photographer focusing on landscape and bird photography."],
-        "bg": "#1C1C1C",
+        "bg": "#222222",
     },
     "recommend":{
         "city": "上海"

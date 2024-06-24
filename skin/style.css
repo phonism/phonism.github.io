@@ -18,13 +18,13 @@
     --color-gray-100: #F5F5F5;
     --color-gray-300: #E0E0E0;
     /*二级颜色*/
-    --color-primary-foreground: #F0F0F0;
+    --color-primary-foreground: #cccccc;
     --color-primary-background: var(--color-primary);
     /*三级颜色*/
     --color-text-profile: var(--color-primary-foreground);
     --color-text-logo: WHITE;
     /*--color-page-background: var(--color-gray-100);*/
-    --color-page-background: #1C1C1C;
+    --color-page-background: #222222;
 }
 
 /*字体样式定义*/
