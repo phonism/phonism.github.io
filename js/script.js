@@ -23,7 +23,7 @@ function getProfile() {
 	if (profile.name) {
 		profileHtml += `<h1 id="my-name" class="title">${profile.name}</h1>`;
 		// 修改页面的title
-		$('head title').text(profile.name + "-ArtOnWeb");
+		$('head title').text(profile.name);
 	}
 	profileHtml += '<p id="my-tag" class="text-body">';
 	for (var i = 0; i < profile.tag.length; i++) {

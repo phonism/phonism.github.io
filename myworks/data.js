@@ -1,6 +1,6 @@
 var myData = {
     "designer": {
-        "name": "LuckyQueen",
+        "name": "LuckyQueen's Photo Gallery",
         "tag": [],
         "bg": "#ADD8E6"
     },
