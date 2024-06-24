@@ -259,10 +259,6 @@ body, html {
     padding-bottom: 0.4rem;
 }
 
-.logo-QR img {
-    width: 11rem;
-    height: 11rem;
-}
 
 .logo-name {
     color: var(--color-text-logo);
