@@ -10,8 +10,29 @@
     <!-- photoswipe样式库 -->
     <link rel="stylesheet" type="text/css" href="js/lib/photoswipe/photoswipe.css"> 
     <link rel="stylesheet" type="text/css" href="js/lib/photoswipe/default-skin/default-skin.css"> 
+    <style>
+        body {
+            user-select: none; /* CSS3 */
+            -webkit-user-select: none; /* Chrome/Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener('copy', function(event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener('dragstart', function(event) {
+            event.preventDefault();
+        });
+    </script>
 </head>
-<body class="has-touch link-transition disable-download">
+<body>
 <!-- 我的信息, 请不要修改此标签 -->
 <div id="profile"></div>
 <!-- 我的作品, 请不要修改此标签 -->
@@ -68,5 +89,8 @@
 <script type="text/javascript" charset="UTF-8" src="js/lib/photoswipe/photoswipe-ui-default.min.js"></script>
 <!-- 核心逻辑 -->
 <script type="text/javascript" charset="UTF-8" src="js/script.js"></script>
+<div class="footer">
+    &copy; 2024 LuckyQueen. All rights reserved.
+</div>
 </body>
 </html>

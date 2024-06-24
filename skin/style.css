@@ -270,3 +270,12 @@ body, html {
     -webkit-text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     cursor: help;
 }
+
+.footer {
+    color: var(--color-primary-foreground);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
