@@ -20,6 +20,7 @@ file_list = sorted(os.listdir("./"))
 for fl in file_list:
     if fl.startswith("photo") and fl.find(".jpg") != -1:
         image = Image.open(fl)
+        width, height = image.size
 
         thumbnail_size = (840, 560)  # 缩略图大小
         image.thumbnail(thumbnail_size)
@@ -27,7 +28,6 @@ for fl in file_list:
         slt = "slt_" + fl
         image.save(slt)
 
-        width, height = image.size
         dic = {
                 "src": "myworks/" + fl,
                 "slt_src": "myworks/" + slt,
