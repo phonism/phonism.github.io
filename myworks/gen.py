@@ -6,7 +6,7 @@ import json
 js = {
     "designer": {
         "name": "Gallery",
-        "tag": ["A beginner photographer focusing on landscape and bird photography."],
+        "tag": ["A programmer with a passion for landscape and bird photography."],
         "bg": "#222222",
     },
     "recommend":{
