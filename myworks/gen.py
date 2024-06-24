@@ -1,12 +1,13 @@
 from PIL import Image
+from PIL.ExifTags import TAGS
 import os
 import json
 
 js = {
     "designer": {
-        "name": "LuckyQueen's Photo Gallery",
-        "tag": [],
-        "bg": "#ADD8E6"
+        "name": "Gallery",
+        "tag": ["A beginner photographer focusing on landscape and bird photography."],
+        "bg": "#1C1C1C",
     },
     "recommend":{
         "city": "上海"
@@ -20,6 +21,10 @@ file_list = sorted(os.listdir("./"))
 for fl in file_list:
     if fl.startswith("photo") and fl.find(".jpg") != -1:
         image = Image.open(fl)
+        #exif_data = image._getexif()
+        #for tag, value in exif_data.items():
+            #tag_name = TAGS.get(tag, tag)
+            #print(tag_name, value)
         width, height = image.size
 
         thumbnail_size = (840, 560)  # 缩略图大小

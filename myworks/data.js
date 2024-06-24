@@ -1,8 +1,8 @@
 var myData = {
     "designer": {
-        "name": "LuckyQueen's Photo Gallery",
-        "tag": [],
-        "bg": "#ADD8E6"
+        "name": "Gallery",
+        "tag": ["A beginner photographer focusing on landscape and bird photography."],
+        "bg": "#1C1C1C",
     },
     "recommend": {
         "city": "上海"
