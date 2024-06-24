@@ -1,8 +1,10 @@
 var myData = {
     "designer": {
         "name": "Gallery",
-        "tag": ["A beginner photographer focusing on landscape and bird photography."],
-        "bg": "#222222",
+        "tag": [
+            "A beginner photographer focusing on landscape and bird photography."
+        ],
+        "bg": "#222222"
     },
     "recommend": {
         "city": "上海"
@@ -13,6 +15,24 @@ var myData = {
             "slt_src": "myworks/slt_photo1.jpg",
             "w": 5190,
             "h": 3460
+        },
+        {
+            "src": "myworks/photo10.jpg",
+            "slt_src": "myworks/slt_photo10.jpg",
+            "w": 2761,
+            "h": 1841
+        },
+        {
+            "src": "myworks/photo11.jpg",
+            "slt_src": "myworks/slt_photo11.jpg",
+            "w": 5568,
+            "h": 3712
+        },
+        {
+            "src": "myworks/photo12.jpg",
+            "slt_src": "myworks/slt_photo12.jpg",
+            "w": 3193,
+            "h": 2128
         },
         {
             "src": "myworks/photo2.jpg",
@@ -55,6 +75,12 @@ var myData = {
             "slt_src": "myworks/slt_photo8.jpg",
             "w": 5568,
             "h": 3712
+        },
+        {
+            "src": "myworks/photo9.jpg",
+            "slt_src": "myworks/slt_photo9.jpg",
+            "w": 4998,
+            "h": 3332
         }
     ]
 }
