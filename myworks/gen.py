@@ -34,10 +34,10 @@ for fl in file_list:
         image.save(slt)
 
         dic = {
-                #"src": "myworks/" + fl,
-                #"slt_src": "myworks/" + slt,
-                "src": "https://fastly.jsdelivr.net/gh/phonism/phonism.github.io/myworks/" + fl,
-                "slt_src": "https://fastly.jsdelivr.net/gh/phonism/phonism.github.io/myworks/" + slt,
+                "src": "myworks/" + fl,
+                "slt_src": "myworks/" + slt,
+                #"src": "https://fastly.jsdelivr.net/gh/phonism/phonism.github.io/myworks/" + fl,
+                #"slt_src": "https://fastly.jsdelivr.net/gh/phonism/phonism.github.io/myworks/" + slt,
                 "w": width,
                 "h": height,
         }
