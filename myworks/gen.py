@@ -19,7 +19,7 @@ js = {
 file_list = sorted(os.listdir("./"))
 
 for fl in file_list:
-    if fl.startswith("photo") and fl.find(".jpg") != -1:
+    if fl.startswith("DSC_") and fl.find(".jpg") != -1:
         image = Image.open(fl)
         #exif_data = image._getexif()
         #for tag, value in exif_data.items():
