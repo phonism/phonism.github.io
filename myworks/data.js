@@ -2,7 +2,7 @@ var myData = {
     "designer": {
         "name": "Gallery",
         "tag": [
-            "A programmer with a passion for landscape and bird photography."
+            "A programmer with a passion for landscape and wildlife photography."
         ],
         "bg": "#222222"
     },
