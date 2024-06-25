@@ -71,14 +71,14 @@ var myData = {
             "h": 2128
         },
         {
-            "src": "myworks/DSC_5711.jpg",
-            "slt_src": "myworks/slt_DSC_5711.jpg",
+            "src": "myworks/DSC_5711-Enhanced-NR.jpg",
+            "slt_src": "myworks/slt_DSC_5711-Enhanced-NR.jpg",
             "w": 4998,
             "h": 3332
         },
         {
-            "src": "myworks/DSC_5799.jpg",
-            "slt_src": "myworks/slt_DSC_5799.jpg",
+            "src": "myworks/DSC_5799-Enhanced-NR.jpg",
+            "slt_src": "myworks/slt_DSC_5799-Enhanced-NR.jpg",
             "w": 2761,
             "h": 1841
         }
