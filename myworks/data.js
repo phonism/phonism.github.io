@@ -11,12 +11,6 @@ var myData = {
     },
     "gallery": [
         {
-            "src": "myworks/DSC_0392.jpg",
-            "slt_src": "myworks/slt_DSC_0392.jpg",
-            "w": 5568,
-            "h": 3712
-        },
-        {
             "src": "myworks/DSC_1645.jpg",
             "slt_src": "myworks/slt_DSC_1645.jpg",
             "w": 5568,
