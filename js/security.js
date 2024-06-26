@@ -1,3 +1,4 @@
+/*
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
@@ -29,3 +30,4 @@ img.addEventListener('touchend', () => {
 img.addEventListener('touchcancel', () => {
     img.classList.remove('no-save');
 });
+*/
