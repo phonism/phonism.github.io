@@ -27,7 +27,7 @@ let parts = path.split('/');
 let lastPart = parts[parts.length - 1];
 let fileName = lastPart.replace('.html', '');
 
-console.log(fileName)
+console.log("fileName:" + fileName)
 
 galleryLength = myData[fileName].length;
 galleryData = myData[fileName];

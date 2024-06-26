@@ -241,9 +241,6 @@ body, html {
 }
 
 @media (max-width: 768px) {
-    .img-wrapper .hover-title {
-        font-size: 1.7rem; /* 在小屏幕上减小字体大小 */
-    }
 }
 
 .gallery-item .img-wrapper:active {
@@ -264,12 +261,18 @@ body, html {
     .gallery-item {
         width: 50%;
     }
+    .img-wrapper .hover-title {
+        font-size: 2rem; /* 在小屏幕上减小字体大小 */
+    }
 }
 
 /*适配移动端*/
 @media screen and (max-width: 400px) {
     .gallery-item {
         width: 100%;
+    }
+    .img-wrapper .hover-title {
+        font-size: 1.7rem; /* 在小屏幕上减小字体大小 */
     }
 }
 
