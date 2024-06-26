@@ -31,7 +31,7 @@ console.log(fileName)
 
 galleryLength = myData[fileName].length;
 galleryData = myData[fileName];
-if (fileName == "index") {
+if (fileName == "index" || fileName == "") {
     isIndex = 1;
 }
 
