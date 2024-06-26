@@ -23,15 +23,15 @@ var galleryData;
 var isIndex = 0;
 
 // 根据路径决定使用哪个数据集
-if (path.includes('birds')) {
-    galleryLength = myData.birds.length;
-    galleryData = myData.birds;
-} else if (path.includes("hawaii")) {
-    galleryLength = myData.hawaii.length;
-    galleryData = myData.hawaii;
-} else {
-    galleryLength = myData.index.length;
-    galleryData = myData.index;
+let parts = path.split('/');
+let lastPart = parts[parts.length - 1];
+let fileName = lastPart.replace('.html', '');
+
+console.log(fileName)
+
+galleryLength = myData[fileName].length;
+galleryData = myData[fileName];
+if (fileName == "index") {
     isIndex = 1;
 }
 
@@ -86,7 +86,7 @@ function getImages() {
 		imgHeight = imgHeight <= 300 ? imgHeight : 300;
         if (isIndex == 0) {
 		    galleryHtml += `
-			    <figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*4)+1}">
+			    <figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*2)+1}">
                     <div class="img-wrapper" style="padding-bottom:${imgHeight}%;">
                     <img src="${gallery[galleryIndex].slt_src}"></div>
 			    </figure>

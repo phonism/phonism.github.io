@@ -13,14 +13,13 @@ js = {
     "recommend":{
         "city": "上海"
     },
-    "hawaii": [],
-    "birds": [],
     "index": []
 }
 
 
 
 def update_js(img_path, tag):
+    js[tag] = []
     file_list = sorted(os.listdir(img_path))
     for fl in file_list:
         if fl.startswith("DSC_") and fl.find(".jpg") != -1:
@@ -45,19 +44,14 @@ def update_js(img_path, tag):
             }
             js[tag].append(dic)
 
-update_js("hawaii", "hawaii")
-update_js("birds", "birds")
+tags = [("hawaii", "Hawaii"), ("birds", "Birds"), ("shanghai", "Shanghai"), ("jinan", "Jinan")]
 
-js["index"].append(copy.deepcopy(js["hawaii"][0]))
-js["index"][-1]["src"] = js["index"][-1]["src"].split("../")[-1]
-js["index"][-1]["slt_src"] = js["index"][-1]["slt_src"].split("../")[-1]
-js["index"][-1]["url"] = "html/hawaii.html"
-js["index"][-1]["title"] = "Hawaii"
-
-js["index"].append(copy.deepcopy(js["birds"][0]))
-js["index"][-1]["src"] = js["index"][-1]["src"].split("../")[-1]
-js["index"][-1]["slt_src"] = js["index"][-1]["slt_src"].split("../")[-1]
-js["index"][-1]["url"] = "html/birds.html"
-js["index"][-1]["title"] = "Birds"
+for tag, title in tags:
+    update_js(tag, tag)
+    js["index"].append(copy.deepcopy(js[tag][0]))
+    js["index"][-1]["src"] = js["index"][-1]["src"].split("../")[-1]
+    js["index"][-1]["slt_src"] = js["index"][-1]["slt_src"].split("../")[-1]
+    js["index"][-1]["url"] = "html/" + tag + ".html"
+    js["index"][-1]["title"] = title
 
 print("var myData = " + json.dumps(js, ensure_ascii=False, indent=4))
