@@ -92,8 +92,9 @@ function getImages() {
 			    </figure>
 		    `;
         } else {
+            // <figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*4)+1}">
 		    galleryHtml += `
-			    <figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*4)+1}">
+                <figure class="gallery-item">
                     <div class="img-wrapper" style="padding-bottom:${imgHeight}%;">
                     <a href="${gallery[galleryIndex].url}">
                     <img src="${gallery[galleryIndex].slt_src}">
