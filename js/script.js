@@ -216,7 +216,9 @@ $(function() {
 	$('#log').append(`<h2>屏幕宽: ${screenWidth}, 页面宽: ${pageWidth}</h2>`);
 
 	// 配置原图查看功能
-	initOverlayout();
+    if (isIndex == 0) {
+	    initOverlayout();
+    }
 	
 	// 页面滚动到底加载新数据
 	$(window).scroll(function() {
