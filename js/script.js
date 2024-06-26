@@ -181,7 +181,7 @@ $(function() {
 		itemSelector: '.gallery-item',
 		columnWidth: $('#gallery').find('.gallery-item')[0],
 		percentPosition: true,
-		horizontalOrder: false,
+		horizontalOrder: true,
 		resize: true,
 		transitionDuration: 0
 	});
