@@ -1,4 +1,3 @@
-/*
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
 });
@@ -11,7 +10,8 @@ document.addEventListener('dragstart', function(event) {
     event.preventDefault();
 });
 
-const img = document.getElementById('myImage');
+/*
+const img = document.getElementById('img');
 
 img.addEventListener('contextmenu', (event) => {
     event.preventDefault();
