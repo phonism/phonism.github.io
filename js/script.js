@@ -14,7 +14,26 @@ var pageWidth = screenWidth;
 //滚动条宽度
 var scrollbarWidth = 0;
 var galleryIndex = 0;
-const galleryLength = myData.gallery.length;
+var path = window.location.pathname;
+
+// const galleryLength = myData.gallery.length;
+
+var galleryLength;
+var galleryData;
+var isIndex = 0;
+
+// 根据路径决定使用哪个数据集
+if (path.includes('birds')) {
+    galleryLength = myData.birds.length;
+    galleryData = myData.birds;
+} else if (path.includes("hawaii")) {
+    galleryLength = myData.hawaii.length;
+    galleryData = myData.hawaii;
+} else {
+    galleryLength = myData.index.length;
+    galleryData = myData.index;
+    isIndex = 1;
+}
 
 // 设置头部的设计师信息, 返回值为HTML标签字符串
 function getProfile() {
@@ -58,19 +77,33 @@ function getProfile() {
 
 // 瀑布流列表获取image的方法, 返回6个标准的瀑布流项, 返回值为HTML标签字符串
 function getImages() {
-	var gallery = myData.gallery;
+	var gallery = galleryData;
 	var galleryHtml = "";
 	for (var i = 0; i < 6 && galleryIndex < galleryLength; i++) {
 		// 使用字符模板返回瀑布流单项, 动画延时采用随机算法, img的高度使用图片尺寸数据动态计算
 		var imgHeight = gallery[galleryIndex].h / gallery[galleryIndex].w * 100;
 		//控制首页作品的最高显示高度为宽度的3倍.
 		imgHeight = imgHeight <= 300 ? imgHeight : 300;
-		galleryHtml += `
-			<figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*4)+1}">
-                <div class="img-wrapper" style="padding-bottom:${imgHeight}%;">
-                <img src="${gallery[galleryIndex].slt_src}"></div>
-			</figure>
-		`;
+        if (isIndex == 0) {
+		    galleryHtml += `
+			    <figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*4)+1}">
+                    <div class="img-wrapper" style="padding-bottom:${imgHeight}%;">
+                    <img src="${gallery[galleryIndex].slt_src}"></div>
+			    </figure>
+		    `;
+        } else {
+		    galleryHtml += `
+			    <figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*4)+1}">
+                    <div class="img-wrapper" style="padding-bottom:${imgHeight}%;">
+                    <a href="${gallery[galleryIndex].url}">
+                    <img src="${gallery[galleryIndex].slt_src}">
+                    <div class="hover-overlay"></div>
+                    <div class="hover-title">${gallery[galleryIndex].title}</div>
+                    </a>
+                    </div>
+			    </figure>
+		    `;
+        }
 		galleryIndex++;
 	}
 	if (galleryHtml) {
@@ -120,7 +153,7 @@ function initOverlayout() {
 			fullscreenEl: false,
 			shareEl: false
 		};
-		var pswpOverlayout = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, myData.gallery, options);
+		var pswpOverlayout = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, galleryData, options);
 		// 监听浮层关闭, 重新开启底部窗口滚动
 		pswpOverlayout.listen('close', function() {
 			$('html, #logo').css("padding-right", "");

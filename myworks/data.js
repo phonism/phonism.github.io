@@ -9,72 +9,92 @@ var myData = {
     "recommend": {
         "city": "上海"
     },
-    "gallery": [
+    "hawaii": [
         {
-            "src": "myworks/DSC_1645.jpg",
-            "slt_src": "myworks/slt_DSC_1645.jpg",
+            "src": "../myworks/hawaii/DSC_1645.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_1645.jpg",
             "w": 5568,
             "h": 3712
         },
         {
-            "src": "myworks/DSC_2067.jpg",
-            "slt_src": "myworks/slt_DSC_2067.jpg",
+            "src": "../myworks/hawaii/DSC_2067.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2067.jpg",
             "w": 3175,
             "h": 2117
         },
         {
-            "src": "myworks/DSC_2559.jpg",
-            "slt_src": "myworks/slt_DSC_2559.jpg",
+            "src": "../myworks/hawaii/DSC_2559.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2559.jpg",
             "w": 4534,
             "h": 3017
         },
         {
-            "src": "myworks/DSC_2607.jpg",
-            "slt_src": "myworks/slt_DSC_2607.jpg",
+            "src": "../myworks/hawaii/DSC_2607.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2607.jpg",
             "w": 5568,
             "h": 3712
         },
         {
-            "src": "myworks/DSC_2691.jpg",
-            "slt_src": "myworks/slt_DSC_2691.jpg",
+            "src": "../myworks/hawaii/DSC_2691.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2691.jpg",
             "w": 3585,
             "h": 2390
         },
         {
-            "src": "myworks/DSC_2745.jpg",
-            "slt_src": "myworks/slt_DSC_2745.jpg",
+            "src": "../myworks/hawaii/DSC_2745.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2745.jpg",
             "w": 3887,
             "h": 2591
         },
         {
-            "src": "myworks/DSC_2813.jpg",
-            "slt_src": "myworks/slt_DSC_2813.jpg",
+            "src": "../myworks/hawaii/DSC_2813.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2813.jpg",
             "w": 5190,
             "h": 3460
         },
         {
-            "src": "myworks/DSC_2829.jpg",
-            "slt_src": "myworks/slt_DSC_2829.jpg",
+            "src": "../myworks/hawaii/DSC_2829.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2829.jpg",
             "w": 5568,
             "h": 3712
         },
         {
-            "src": "myworks/DSC_5117.jpg",
-            "slt_src": "myworks/slt_DSC_5117.jpg",
+            "src": "../myworks/hawaii/DSC_5117.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_5117.jpg",
             "w": 3193,
             "h": 2128
-        },
+        }
+    ],
+    "birds": [
         {
-            "src": "myworks/DSC_5711-Enhanced-NR.jpg",
-            "slt_src": "myworks/slt_DSC_5711-Enhanced-NR.jpg",
+            "src": "../myworks/birds/DSC_5711-Enhanced-NR.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_5711-Enhanced-NR.jpg",
             "w": 4998,
             "h": 3332
         },
         {
-            "src": "myworks/DSC_5799-Enhanced-NR.jpg",
-            "slt_src": "myworks/slt_DSC_5799-Enhanced-NR.jpg",
+            "src": "../myworks/birds/DSC_5799-Enhanced-NR.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_5799-Enhanced-NR.jpg",
             "w": 2761,
             "h": 1841
+        }
+    ],
+    "index": [
+        {
+            "src": "myworks/hawaii/DSC_1645.jpg",
+            "slt_src": "myworks/hawaii/slt_DSC_1645.jpg",
+            "w": 5568,
+            "h": 3712,
+            "url": "html/hawaii.html",
+            "title": "Hawaii"
+        },
+        {
+            "src": "myworks/birds/DSC_5711-Enhanced-NR.jpg",
+            "slt_src": "myworks/birds/slt_DSC_5711-Enhanced-NR.jpg",
+            "w": 4998,
+            "h": 3332,
+            "url": "html/birds.html",
+            "title": "Birds"
         }
     ]
 }
