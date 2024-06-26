@@ -69,6 +69,18 @@ var myData = {
             "h": 3712
         },
         {
+            "src": "../myworks/hawaii/DSC_2624.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2624.jpg",
+            "w": 5568,
+            "h": 3712
+        },
+        {
+            "src": "../myworks/hawaii/DSC_2627.jpg",
+            "slt_src": "../myworks/hawaii/slt_DSC_2627.jpg",
+            "w": 4906,
+            "h": 3271
+        },
+        {
             "src": "../myworks/hawaii/DSC_2691.jpg",
             "slt_src": "../myworks/hawaii/slt_DSC_2691.jpg",
             "w": 3585,
