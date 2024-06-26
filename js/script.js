@@ -29,9 +29,13 @@ let fileName = lastPart.replace('.html', '');
 
 console.log("fileName:" + fileName)
 
+if (fileName == "") {
+    fileName = "index";
+}
+
 galleryLength = myData[fileName].length;
 galleryData = myData[fileName];
-if (fileName == "index" || fileName == "") {
+if (fileName == "index") {
     isIndex = 1;
 }
 
