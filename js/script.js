@@ -97,6 +97,7 @@ function getImages() {
 		    `;
         } else {
             // <figure class="gallery-item animate-up animate-delay-${Math.floor(Math.random()*4)+1}">
+            // <div class="img-wrapper" style="padding-bottom:${imgHeight}%;">
 		    galleryHtml += `
                 <figure class="gallery-item">
                     <div class="img-wrapper" style="padding-bottom:${imgHeight}%;">

@@ -21,8 +21,8 @@ var myData = {
         {
             "src": "myworks/birds/DSC_5711-Enhanced-NR.jpg",
             "slt_src": "myworks/birds/slt_DSC_5711-Enhanced-NR.jpg",
-            "w": 4998,
-            "h": 3332,
+            "w": 6799,
+            "h": 4391,
             "url": "html/birds.html",
             "title": "Birds"
         },
@@ -99,14 +99,14 @@ var myData = {
         {
             "src": "../myworks/birds/DSC_5711-Enhanced-NR.jpg",
             "slt_src": "../myworks/birds/slt_DSC_5711-Enhanced-NR.jpg",
-            "w": 4998,
-            "h": 3332
+            "w": 6799,
+            "h": 4391
         },
         {
             "src": "../myworks/birds/DSC_5799-Enhanced-NR.jpg",
             "slt_src": "../myworks/birds/slt_DSC_5799-Enhanced-NR.jpg",
-            "w": 2761,
-            "h": 1841
+            "w": 3302,
+            "h": 2201
         }
     ],
     "shanghai": [
