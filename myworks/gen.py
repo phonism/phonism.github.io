@@ -44,7 +44,13 @@ def update_js(img_path, tag):
             }
             js[tag].append(dic)
 
-tags = [("hawaii", "Hawaii"), ("birds", "Birds"), ("shanghai", "Shanghai"), ("jinan", "Jinan"), ("dolls", "Dolls")]
+tags = [
+        ("hawaii", "Hawaii"), 
+        ("birds", "Birds"), 
+        ("dolls", "Dolls"),
+        ("shanghai", "Shanghai"), 
+        ("jinan", "Jinan"), 
+]
 
 for tag, title in tags:
     update_js(tag, tag)

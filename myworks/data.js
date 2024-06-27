@@ -27,6 +27,14 @@ var myData = {
             "title": "Birds"
         },
         {
+            "src": "myworks/dolls/DSC_5207.jpg",
+            "slt_src": "myworks/dolls/slt_DSC_5207.jpg",
+            "w": 5504,
+            "h": 8256,
+            "url": "html/dolls.html",
+            "title": "Dolls"
+        },
+        {
             "src": "myworks/shanghai/DSC_2745.jpg",
             "slt_src": "myworks/shanghai/slt_DSC_2745.jpg",
             "w": 3887,
@@ -41,14 +49,6 @@ var myData = {
             "h": 2128,
             "url": "html/jinan.html",
             "title": "Jinan"
-        },
-        {
-            "src": "myworks/dolls/DSC_5207.jpg",
-            "slt_src": "myworks/dolls/slt_DSC_5207.jpg",
-            "w": 5504,
-            "h": 8256,
-            "url": "html/dolls.html",
-            "title": "Dolls"
         }
     ],
     "hawaii": [
@@ -109,34 +109,6 @@ var myData = {
             "h": 1841
         }
     ],
-    "shanghai": [
-        {
-            "src": "../myworks/shanghai/DSC_2745.jpg",
-            "slt_src": "../myworks/shanghai/slt_DSC_2745.jpg",
-            "w": 3887,
-            "h": 2591
-        },
-        {
-            "src": "../myworks/shanghai/DSC_2813.jpg",
-            "slt_src": "../myworks/shanghai/slt_DSC_2813.jpg",
-            "w": 5190,
-            "h": 3460
-        },
-        {
-            "src": "../myworks/shanghai/DSC_2829.jpg",
-            "slt_src": "../myworks/shanghai/slt_DSC_2829.jpg",
-            "w": 5568,
-            "h": 3712
-        }
-    ],
-    "jinan": [
-        {
-            "src": "../myworks/jinan/DSC_5117.jpg",
-            "slt_src": "../myworks/jinan/slt_DSC_5117.jpg",
-            "w": 3193,
-            "h": 2128
-        }
-    ],
     "dolls": [
         {
             "src": "../myworks/dolls/DSC_5207.jpg",
@@ -173,6 +145,34 @@ var myData = {
             "slt_src": "../myworks/dolls/slt_DSC_5223.jpg",
             "w": 5047,
             "h": 7571
+        }
+    ],
+    "shanghai": [
+        {
+            "src": "../myworks/shanghai/DSC_2745.jpg",
+            "slt_src": "../myworks/shanghai/slt_DSC_2745.jpg",
+            "w": 3887,
+            "h": 2591
+        },
+        {
+            "src": "../myworks/shanghai/DSC_2813.jpg",
+            "slt_src": "../myworks/shanghai/slt_DSC_2813.jpg",
+            "w": 5190,
+            "h": 3460
+        },
+        {
+            "src": "../myworks/shanghai/DSC_2829.jpg",
+            "slt_src": "../myworks/shanghai/slt_DSC_2829.jpg",
+            "w": 5568,
+            "h": 3712
+        }
+    ],
+    "jinan": [
+        {
+            "src": "../myworks/jinan/DSC_5117.jpg",
+            "slt_src": "../myworks/jinan/slt_DSC_5117.jpg",
+            "w": 3193,
+            "h": 2128
         }
     ]
 }
