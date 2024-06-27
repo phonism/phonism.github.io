@@ -41,6 +41,14 @@ var myData = {
             "h": 2128,
             "url": "html/jinan.html",
             "title": "Jinan"
+        },
+        {
+            "src": "myworks/dolls/DSC_5207.jpg",
+            "slt_src": "myworks/dolls/slt_DSC_5207.jpg",
+            "w": 5504,
+            "h": 8256,
+            "url": "html/dolls.html",
+            "title": "Dolls"
         }
     ],
     "hawaii": [
@@ -127,6 +135,44 @@ var myData = {
             "slt_src": "../myworks/jinan/slt_DSC_5117.jpg",
             "w": 3193,
             "h": 2128
+        }
+    ],
+    "dolls": [
+        {
+            "src": "../myworks/dolls/DSC_5207.jpg",
+            "slt_src": "../myworks/dolls/slt_DSC_5207.jpg",
+            "w": 5504,
+            "h": 8256
+        },
+        {
+            "src": "../myworks/dolls/DSC_5212.jpg",
+            "slt_src": "../myworks/dolls/slt_DSC_5212.jpg",
+            "w": 5504,
+            "h": 8256
+        },
+        {
+            "src": "../myworks/dolls/DSC_5215.jpg",
+            "slt_src": "../myworks/dolls/slt_DSC_5215.jpg",
+            "w": 4842,
+            "h": 7263
+        },
+        {
+            "src": "../myworks/dolls/DSC_5218.jpg",
+            "slt_src": "../myworks/dolls/slt_DSC_5218.jpg",
+            "w": 5168,
+            "h": 7752
+        },
+        {
+            "src": "../myworks/dolls/DSC_5221.jpg",
+            "slt_src": "../myworks/dolls/slt_DSC_5221.jpg",
+            "w": 4819,
+            "h": 7228
+        },
+        {
+            "src": "../myworks/dolls/DSC_5223.jpg",
+            "slt_src": "../myworks/dolls/slt_DSC_5223.jpg",
+            "w": 5047,
+            "h": 7571
         }
     ]
 }
