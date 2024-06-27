@@ -47,9 +47,9 @@ def update_js(img_path, tag):
 tags = [
         ("hawaii", "Hawaii"), 
         ("birds", "Birds"), 
-        ("dolls", "Dolls"),
         ("shanghai", "Shanghai"), 
         ("jinan", "Jinan"), 
+        ("dolls", "Dolls"),
 ]
 
 for tag, title in tags:
