@@ -107,6 +107,66 @@ var myData = {
             "slt_src": "../myworks/birds/slt_DSC_5799-Enhanced-NR.jpg",
             "w": 3302,
             "h": 2201
+        },
+        {
+            "src": "../myworks/birds/DSC_6444-Enhanced-NR.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_6444-Enhanced-NR.jpg",
+            "w": 4924,
+            "h": 3283
+        },
+        {
+            "src": "../myworks/birds/DSC_6483-Enhanced-NR.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_6483-Enhanced-NR.jpg",
+            "w": 4044,
+            "h": 2696
+        },
+        {
+            "src": "../myworks/birds/DSC_6538-Enhanced-NR.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_6538-Enhanced-NR.jpg",
+            "w": 916,
+            "h": 611
+        },
+        {
+            "src": "../myworks/birds/DSC_6593.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_6593.jpg",
+            "w": 5162,
+            "h": 3441
+        },
+        {
+            "src": "../myworks/birds/DSC_6933.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_6933.jpg",
+            "w": 3903,
+            "h": 2602
+        },
+        {
+            "src": "../myworks/birds/DSC_7086.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_7086.jpg",
+            "w": 6751,
+            "h": 4501
+        },
+        {
+            "src": "../myworks/birds/DSC_7177.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_7177.jpg",
+            "w": 7571,
+            "h": 5047
+        },
+        {
+            "src": "../myworks/birds/DSC_7187.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_7187.jpg",
+            "w": 6224,
+            "h": 4149
+        },
+        {
+            "src": "../myworks/birds/DSC_7321.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_7321.jpg",
+            "w": 7334,
+            "h": 4889
+        },
+        {
+            "src": "../myworks/birds/DSC_7470.jpg",
+            "slt_src": "../myworks/birds/slt_DSC_7470.jpg",
+            "w": 6431,
+            "h": 4287
         }
     ],
     "shanghai": [
