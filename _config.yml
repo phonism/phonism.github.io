@@ -16,6 +16,10 @@ baseurl: ""
 url: "https://phonism.github.io"
 repository: phonism/phonism.github.io
 
+# 包含 .well-known 目录（Jekyll 默认忽略 dot-files）
+include:
+  - .well-known
+
 # 排除不需要的文件
 exclude:
   - README.md
