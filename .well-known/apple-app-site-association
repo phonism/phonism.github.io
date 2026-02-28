@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["VZ69WL8U37.com.luqi.thanos"],
+        "components": [
+          { "/": "/nfc*" }
+        ]
+      }
+    ]
+  }
+}
